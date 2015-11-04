@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A03D2C531BE95BDC009317A6 /* Group_A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03D2C521BE95BDC009317A6 /* Group_A.framework */; };
 		A0A0EB1E1BE1C6050012D985 /* Group_A.h in Headers */ = {isa = PBXBuildFile; fileRef = A0A0EB1D1BE1C6050012D985 /* Group_A.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0A0EB251BE1C6050012D985 /* Group_A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A0EB1A1BE1C6050012D985 /* Group_A.framework */; };
 		A0A0EB2A1BE1C6050012D985 /* Group_ATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A0EB291BE1C6050012D985 /* Group_ATests.swift */; };
@@ -23,6 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A03D2C4E1BE95977009317A6 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Carthage; path = ../Carthage; sourceTree = "<group>"; };
+		A03D2C501BE95BC8009317A6 /* Build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Build; path = Carthage/Build; sourceTree = "<group>"; };
+		A03D2C521BE95BDC009317A6 /* Group_A.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Group_A.framework; path = Carthage/Build/iOS/Group_A.framework; sourceTree = "<group>"; };
 		A0A0EB1A1BE1C6050012D985 /* Group_A.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Group_A.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A0EB1D1BE1C6050012D985 /* Group_A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Group_A.h; sourceTree = "<group>"; };
 		A0A0EB1F1BE1C6050012D985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03D2C531BE95BDC009317A6 /* Group_A.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,9 @@
 		A0A0EB101BE1C6050012D985 = {
 			isa = PBXGroup;
 			children = (
+				A03D2C521BE95BDC009317A6 /* Group_A.framework */,
+				A03D2C501BE95BC8009317A6 /* Build */,
+				A03D2C4E1BE95977009317A6 /* Carthage */,
 				A0A0EB1C1BE1C6050012D985 /* Group_A */,
 				A0A0EB281BE1C6050012D985 /* Group_ATests */,
 				A0A0EB1B1BE1C6050012D985 /* Products */,
@@ -308,10 +316,15 @@
 		A0A0EB2F1BE1C6050012D985 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Group_A/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -324,10 +337,15 @@
 		A0A0EB301BE1C6050012D985 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Group_A/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -376,6 +394,7 @@
 				A0A0EB301BE1C6050012D985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0A0EB311BE1C6050012D985 /* Build configuration list for PBXNativeTarget "Group_ATests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +403,7 @@
 				A0A0EB331BE1C6050012D985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

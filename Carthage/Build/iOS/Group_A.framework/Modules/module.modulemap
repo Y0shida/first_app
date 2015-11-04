@@ -1,0 +1,6 @@
+framework module Group_A {
+  umbrella header "Group_A.h"
+
+  export *
+  module * { export * }
+}
